@@ -1,0 +1,1 @@
+select name from person where license_id in (select id from drivers_license where car_make = 'Tesla' and car_model = 'Model S' and hair_color = 'red' and height in ('65', '66', '67')) and id in (select person_id from facebook_event_checkin where event_name like ('%SQL Symphony concert%') and date like ('201712%'));
